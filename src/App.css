@@ -1,8 +1,9 @@
 #root {
-  max-width: 1280px;
+  /* max-width: 1280px; */
+  width: 100%;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  /* padding: 2rem; */
+  /* text-align: center; */
 }
 
 .logo {
@@ -11,9 +12,11 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -22,6 +25,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -96,18 +100,63 @@ body {
   z-index: 1;
 }
 
+.hero-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 16px;
+  border-radius: 100px;
+  margin-bottom: 24px;
+  backdrop-filter: blur(10px);
+}
+
+.hero-badge span {
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
 .hero-title {
   color: white !important;
-  font-size: 3.5rem !important;
+  font-size: 4rem !important;
   font-weight: 700 !important;
   margin-bottom: 1.5rem !important;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  line-height: 1.2 !important;
 }
 
 .hero-subtitle {
   color: rgba(255, 255, 255, 0.9) !important;
   font-size: 1.25rem !important;
   margin-bottom: 2rem !important;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  margin-top: 48px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-number {
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.stat-label {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.875rem;
+  margin-top: 4px;
 }
 
 /* Features section */
@@ -133,14 +182,18 @@ body {
 .section-description {
   font-size: 1.1rem !important;
   color: #666 !important;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .feature-card {
   height: 100%;
-  border-radius: 12px;
+  border-radius: 16px;
   transition: all 0.3s ease;
   border: 1px solid #f0f0f0;
   overflow: hidden;
+  padding: 32px;
 }
 
 .feature-card:hover {
@@ -164,6 +217,21 @@ body {
   color: white;
 }
 
+.feature-link {
+  padding: 0 !important;
+  height: auto !important;
+  margin-top: 16px !important;
+}
+
+.feature-link .anticon {
+  margin-left: 4px;
+  transition: transform 0.3s ease;
+}
+
+.feature-link:hover .anticon {
+  transform: translateX(4px);
+}
+
 /* Benefits section */
 .benefits-section {
   padding: 100px 0;
@@ -173,9 +241,10 @@ body {
 .benefit-card {
   text-align: center;
   height: 100%;
-  border-radius: 12px;
+  border-radius: 16px;
   transition: all 0.3s ease;
   border: 1px solid #f0f0f0;
+  padding: 32px;
 }
 
 .benefit-card:hover {
@@ -199,11 +268,55 @@ body {
   color: white;
 }
 
+.benefit-link {
+  padding: 0 !important;
+  height: auto !important;
+  margin-top: 16px !important;
+}
+
+.benefit-link .anticon {
+  margin-left: 4px;
+  transition: transform 0.3s ease;
+}
+
+.benefit-link:hover .anticon {
+  transform: translateX(4px);
+}
+
+/* CTA section */
+.cta-section {
+  padding: 100px 0;
+  background: #fff;
+  text-align: center;
+}
+
+.cta-title {
+  font-size: 2.5rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 1rem !important;
+  background: linear-gradient(135deg, #1890ff 0%, #722ed1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cta-description {
+  font-size: 1.1rem !important;
+  color: #666 !important;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Button styles */
 .gradient-btn {
   background: linear-gradient(135deg, #1890ff 0%, #722ed1 100%) !important;
   border: none !important;
   box-shadow: 0 4px 12px rgba(24, 144, 255, 0.3) !important;
+  height: 48px !important;
+  padding: 0 32px !important;
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+  border-radius: 8px !important;
 }
 
 .gradient-btn:hover {
@@ -216,6 +329,11 @@ body {
   border: 2px solid white !important;
   color: white !important;
   background: transparent !important;
+  height: 48px !important;
+  padding: 0 32px !important;
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+  border-radius: 8px !important;
 }
 
 .outline-btn:hover {
@@ -268,24 +386,34 @@ body {
   .hero-title {
     font-size: 2.5rem !important;
   }
-  
+
   .hero-subtitle {
     font-size: 1.1rem !important;
   }
-  
+
   .section-header h2 {
     font-size: 2rem !important;
   }
-  
+
+  .hero-stats {
+    flex-direction: column;
+    gap: 24px;
+  }
+
   .ant-layout-header {
     padding: 0 16px;
   }
-  
+
   .ant-layout-content {
     margin-top: 56px;
   }
-  
+
   .footer-content {
     text-align: center;
+  }
+
+  .feature-card,
+  .benefit-card {
+    padding: 24px;
   }
 }
