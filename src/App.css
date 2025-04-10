@@ -53,12 +53,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #fafafa;
+  /* background-color: #fafafa; */
 }
 
 /* Layout styles */
 .ant-layout {
-  background: #fff;
+  background-color: #0f172a;
 }
 
 /* Header styles */

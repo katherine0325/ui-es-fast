@@ -1,47 +1,25 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { useParams, useNavigate } from "react-router-dom"
+import { useParams, Link } from "react-router-dom"
 import { Layout, Spin, Input, Menu } from "antd"
 import { SearchOutlined } from "@ant-design/icons"
-import DocsMobileNav from "../components/docs/DocsMobileNav"
-import MarkdownRenderer from "../components/docs/MarkdownRenderer"
-import { getDocContent } from "../utils/docs"
+import MarkdownRenderer from "../components/MarkdownRenderer"
+import { getAllDocs, getDocContent } from "../utils/docs"
 
 const { Header, Sider, Content } = Layout
 
 function DocsPage() {
+  const [menu, setMenu] = useState([]);
   const { section = "getting-started" } = useParams()
-  const navigate = useNavigate()
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false)
   const [activeSection, setActiveSection] = useState(section)
   const [content, setContent] = useState("")
   const [loading, setLoading] = useState(true)
-  const [headings, setHeadings] = useState([])
 
-  // Handle section change
-  const handleSectionChange = (newSection) => {
-    setActiveSection(newSection)
-    navigate(`/docs/${newSection}`)
-    setIsSidebarOpen(false)
-  }
-
-  // Extract headings from markdown content
-  const extractHeadings = (content) => {
-    const headingRegex = /^(#{1,3})\s+(.+)$/gm
-    const matches = [...content.matchAll(headingRegex)]
-
-    return matches.map((match, index) => {
-      const level = match[1].length
-      const text = match[2]
-      const id = text
-        .toLowerCase()
-        .replace(/[^\w\s-]/g, "")
-        .replace(/\s+/g, "-")
-
-      return { id, text, level }
-    })
-  }
+  useEffect(() => {
+    const res = getAllDocs();
+    setMenu(res);
+  }, [])
 
   // Fetch content when section changes
   useEffect(() => {
@@ -50,7 +28,6 @@ function DocsPage() {
       try {
         const data = await getDocContent(activeSection)
         setContent(data)
-        setHeadings(extractHeadings(data))
       } catch (error) {
         console.error("Failed to fetch documentation:", error)
         setContent("# Error loading documentation\n\nPlease try again later.")
@@ -63,7 +40,7 @@ function DocsPage() {
   }, [activeSection])
 
   return (
-    <Layout className="min-h-screen">
+    <Layout className="min-h-screen bg-slate-800">
       {/* Desktop Sidebar */}
       <Sider
         width={280}
@@ -71,33 +48,24 @@ function DocsPage() {
         theme="dark"
       >
         <div className="p-4 border-b border-slate-700">
-          <h1 className="text-xl font-bold text-cyan-400">ESFast</h1>
+          <Link to="/">
+            <h1 className="text-xl font-bold text-cyan-400">
+              ESFast
+            </h1>
+          </Link>
         </div>
-        <div className="p-4">
+        {/* <div className="p-4">
           <Input prefix={<SearchOutlined />} placeholder="搜索文档..." className="bg-slate-800 border-slate-700" />
-        </div>
+        </div> */}
         {/* <DocsSidebar activeSection={activeSection} setActiveSection={handleSectionChange} /> */}
         <Menu
-          defaultSelectedKeys={['1']}
+          defaultSelectedKeys={['getting-started']}
           mode="inline"
           theme="dark"
-          items={[
-            { key: '1', label: '5分钟开始一个应用' },
-            { key: '2', label: 'IndexedDB 存储' },
-            { key: '3', label: 'Node 方法调用' },
-            { key: '4', label: '图片本地存储' },
-            { key: '5', label: '打包程序' },
-          ]}
+          items={menu}
+          onClick={({ key }) => setActiveSection(key)}
         />
       </Sider>
-
-      {/* Mobile Navigation */}
-      <DocsMobileNav
-        isSidebarOpen={isSidebarOpen}
-        setIsSidebarOpen={setIsSidebarOpen}
-        activeSection={activeSection}
-        setActiveSection={handleSectionChange}
-      />
 
       <Layout className="md:ml-[280px]">
         {/* <Header className="bg-slate-900 border-b border-slate-700 p-4 flex items-center">

@@ -91,7 +91,7 @@ export default function HomePage() {
                 <div className="h-3 w-3 rounded-full bg-red-500"></div>
                 <div className="h-3 w-3 rounded-full bg-yellow-500"></div>
                 <div className="h-3 w-3 rounded-full bg-green-500"></div>
-                <div className="ml-2 text-xs text-slate-400">App.vue</div>
+                <div className="ml-2 text-xs text-slate-400">使用案例</div>
               </div>
               <img src="home_01.jpg" className="opacity-90" />
               {/* <pre className="text-sm text-cyan-300 overflow-x-auto">
