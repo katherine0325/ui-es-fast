@@ -66,7 +66,7 @@ export default function HomePage() {
             </div>
 
             <div className="flex flex-wrap gap-4 pt-4">
-              <a href="https://shop100908340.taobao.com" target="blank">
+              <a href="https://item.taobao.com/item.htm?app=chrome&bxsign=scdOAETRDk-xFixirJYp5yP3uCclQC2heJqG_Hi66cvWxX0YGuzSEnkZIa1IbnDc0c-60T1BiWLX-PLMSIQ3ewEDGDOpOKgcmIyqRRzf6BfXO1Zk84JJhhwgF4SP_GP5gHf&cpp=1&id=910350216112&share_crt_v=1&shareurl=true&short_name=h.6hY8mrHrpVdhaRh&sourceType=item&sp_tk=bTdiOFZhcmRIQWI%3D&spm=a2159r.13376460.0.0&suid=36008950-0F6A-4D46-9CC1-E0B1B580BC20&tbSocialPopKey=shareItem&tk=m7b8VardHAb&un=f369684893923da77818d8ca87f7ee9a&un_site=0&ut_sk=1.Yf%2BoszwTvQMDAPrbhdDDX7MZ_21380790_1744371640398.Copy.ShareGlobalNavigation_1" target="blank">
                 <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium px-6 py-3 rounded-lg transition-all shadow-lg shadow-cyan-500/20 flex items-center gap-2">
                   <ShoppingCart className="h-5 w-5" />
                   购买框架 (v1.0.0)
@@ -138,7 +138,7 @@ onMounted(async () => {
       <section className="container mx-auto px-4 py-16">
         <h2 className="text-3xl font-bold text-center mb-12">功能展示</h2>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 text-center">
           {/* Feature Card 1 */}
           <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:border-cyan-500/50 transition-all group">
             <div className="bg-gradient-to-br from-cyan-500 to-blue-600 w-12 h-12 mx-auto rounded-lg flex items-center justify-center mb-4 group-hover:shadow-lg group-hover:shadow-cyan-500/20 transition-all">
@@ -273,7 +273,7 @@ onMounted(async () => {
           </div>
 
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="https://shop100908340.taobao.com" target="blank">
+            <a href="https://item.taobao.com/item.htm?app=chrome&bxsign=scdOAETRDk-xFixirJYp5yP3uCclQC2heJqG_Hi66cvWxX0YGuzSEnkZIa1IbnDc0c-60T1BiWLX-PLMSIQ3ewEDGDOpOKgcmIyqRRzf6BfXO1Zk84JJhhwgF4SP_GP5gHf&cpp=1&id=910350216112&share_crt_v=1&shareurl=true&short_name=h.6hY8mrHrpVdhaRh&sourceType=item&sp_tk=bTdiOFZhcmRIQWI%3D&spm=a2159r.13376460.0.0&suid=36008950-0F6A-4D46-9CC1-E0B1B580BC20&tbSocialPopKey=shareItem&tk=m7b8VardHAb&un=f369684893923da77818d8ca87f7ee9a&un_site=0&ut_sk=1.Yf%2BoszwTvQMDAPrbhdDDX7MZ_21380790_1744371640398.Copy.ShareGlobalNavigation_1" target="blank">
               <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium px-8 py-4 rounded-lg transition-all shadow-lg shadow-cyan-500/20 flex items-center gap-2">
                 <ShoppingCart className="h-5 w-5" />
                 购买框架 (v1.0.0)
@@ -339,14 +339,18 @@ onMounted(async () => {
               <h4 className="font-bold mb-4">资源</h4>
               <ul className="space-y-2">
                 <li>
-                  <a href="#" className="text-slate-400 hover:text-cyan-400 transition-colors">
-                    文档中心
-                  </a>
+                  <Link to="/docs">
+                    <a href="#" className="text-slate-400 hover:text-cyan-400 transition-colors">
+                      文档中心
+                    </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="text-slate-400 hover:text-cyan-400 transition-colors">
-                    API参考
-                  </a>
+                  <Link to="/docs">
+                    <a href="#" className="text-slate-400 hover:text-cyan-400 transition-colors">
+                      API参考
+                    </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -355,7 +359,7 @@ onMounted(async () => {
           <div className="border-t border-slate-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
             <p className="text-slate-400">© {new Date().getFullYear()} Electron Software Fast. 基础框架</p>
             <div className="flex gap-4 mt-4 md:mt-0">
-              <a href="https://shop100908340.taobao.com" target="blank" className="text-slate-400 hover:text-cyan-400 transition-colors">
+              <a href="https://item.taobao.com/item.htm?app=chrome&bxsign=scdOAETRDk-xFixirJYp5yP3uCclQC2heJqG_Hi66cvWxX0YGuzSEnkZIa1IbnDc0c-60T1BiWLX-PLMSIQ3ewEDGDOpOKgcmIyqRRzf6BfXO1Zk84JJhhwgF4SP_GP5gHf&cpp=1&id=910350216112&share_crt_v=1&shareurl=true&short_name=h.6hY8mrHrpVdhaRh&sourceType=item&sp_tk=bTdiOFZhcmRIQWI%3D&spm=a2159r.13376460.0.0&suid=36008950-0F6A-4D46-9CC1-E0B1B580BC20&tbSocialPopKey=shareItem&tk=m7b8VardHAb&un=f369684893923da77818d8ca87f7ee9a&un_site=0&ut_sk=1.Yf%2BoszwTvQMDAPrbhdDDX7MZ_21380790_1744371640398.Copy.ShareGlobalNavigation_1" target="blank" className="text-slate-400 hover:text-cyan-400 transition-colors">
                 <TaobaoOutlined className="h-5 w-5" />
               </a>
               {/* <a href="#" className="text-slate-400 hover:text-cyan-400 transition-colors">

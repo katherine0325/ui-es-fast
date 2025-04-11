@@ -14,6 +14,3 @@ If you are developing a production application, we recommend using TypeScript an
 
 
 # 待开发
-- 标题
-- seo
-- 淘宝商品地址
