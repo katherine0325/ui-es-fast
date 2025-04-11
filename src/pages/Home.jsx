@@ -43,7 +43,7 @@ export default function HomePage() {
           <div className="space-y-6">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">Electron Software Fast</h1>
             <h2 className="text-xl md:text-2xl text-cyan-400 font-medium">
-              自带vue3，antd，tailwind css，typescript，indexdb存储数据，fs方法调用，图片存储最佳实践
+              集成Vue3，Antd，TailwindCss，Typescript，Indexdb存储数据，Node原生能力调用，图片存储最佳实践
             </h2>
 
             <div className="flex flex-wrap gap-3">
@@ -66,14 +66,18 @@ export default function HomePage() {
             </div>
 
             <div className="flex flex-wrap gap-4 pt-4">
-              <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium px-6 py-3 rounded-lg transition-all shadow-lg shadow-cyan-500/20 flex items-center gap-2">
-                <ShoppingCart className="h-5 w-5" />
-                购买框架 (v1.0.0)
-              </button>
-              <button className="bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white font-medium px-6 py-3 rounded-lg transition-all flex items-center gap-2">
-                <BookOpen className="h-5 w-5" />
-                查看完整文档
-              </button>
+              <a href="https://shop100908340.taobao.com" target="blank">
+                <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium px-6 py-3 rounded-lg transition-all shadow-lg shadow-cyan-500/20 flex items-center gap-2">
+                  <ShoppingCart className="h-5 w-5" />
+                  购买框架 (v1.0.0)
+                </button>
+              </a>
+              <Link to="/docs">
+                <button className="bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white font-medium px-6 py-3 rounded-lg transition-all flex items-center gap-2">
+                  <BookOpen className="h-5 w-5" />
+                  查看完整文档
+                </button>
+              </Link>
             </div>
 
             <div className="flex flex-wrap gap-2 pt-2">
@@ -269,14 +273,18 @@ onMounted(async () => {
           </div>
 
           <div className="flex flex-wrap justify-center gap-4">
-            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium px-8 py-4 rounded-lg transition-all shadow-lg shadow-cyan-500/20 flex items-center gap-2">
-              <ShoppingCart className="h-5 w-5" />
-              购买框架 (v1.0.0)
-            </button>
-            <button className="bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white font-medium px-8 py-4 rounded-lg transition-all flex items-center gap-2">
-              <BookOpen className="h-5 w-5" />
-              查看完整文档
-            </button>
+            <a href="https://shop100908340.taobao.com" target="blank">
+              <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium px-8 py-4 rounded-lg transition-all shadow-lg shadow-cyan-500/20 flex items-center gap-2">
+                <ShoppingCart className="h-5 w-5" />
+                购买框架 (v1.0.0)
+              </button>
+            </a>
+            <Link to="/docs">
+              <button className="bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white font-medium px-8 py-4 rounded-lg transition-all flex items-center gap-2">
+                <BookOpen className="h-5 w-5" />
+                查看完整文档
+              </button>
+            </Link>
           </div>
 
           <div className="mt-8 flex justify-center gap-8">
@@ -347,7 +355,7 @@ onMounted(async () => {
           <div className="border-t border-slate-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
             <p className="text-slate-400">© {new Date().getFullYear()} Electron Software Fast. 基础框架</p>
             <div className="flex gap-4 mt-4 md:mt-0">
-              <a href="#" className="text-slate-400 hover:text-cyan-400 transition-colors">
+              <a href="https://shop100908340.taobao.com" target="blank" className="text-slate-400 hover:text-cyan-400 transition-colors">
                 <TaobaoOutlined className="h-5 w-5" />
               </a>
               {/* <a href="#" className="text-slate-400 hover:text-cyan-400 transition-colors">

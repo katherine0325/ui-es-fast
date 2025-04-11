@@ -11,7 +11,7 @@ const { Header, Sider, Content } = Layout
 
 function DocsPage() {
   const [menu, setMenu] = useState([]);
-  const { section = "getting-started" } = useParams()
+  const { section = "start" } = useParams()
   const [activeSection, setActiveSection] = useState(section)
   const [content, setContent] = useState("")
   const [loading, setLoading] = useState(true)

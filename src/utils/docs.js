@@ -9,10 +9,14 @@ export async function getDocContent(title) {
 
 export function getAllDocs() {
   return [
-    { key: 'getting-started', label: '5分钟开始一个应用' },
-    { key: 'indexeddb-basics', label: 'IndexedDB 存储' },
-    { key: 'node-methods-fs', label: 'Node 方法调用' },
-    { key: 'image-storage-basics', label: '图片本地存储' },
-    { key: 'packaging-mac', label: '打包程序' },
+    { key: 'start', label: '5分钟开始一个应用' },
+    { key: 'antd', label: '在应用中使用Antd组件' },
+    { key: 'tailwind', label: '在应用中使用TailwindCss' },
+    { key: 'route', label: '路由分页' },
+    { key: 'indexdb', label: '数据增删改查' },
+    { key: 'node', label: 'Node原生方法的调用' },
+    { key: 'image', label: '图片存储最佳实践' },
+    { key: 'icon', label: '设置图标' },
+    { key: 'build', label: '打包发布' },
   ]
 }

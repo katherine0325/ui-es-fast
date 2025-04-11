@@ -59,6 +59,7 @@ function MarkdownRenderer({ content }) {
           blockquote: ({ node, ...props }) => (
             <blockquote className="border-l-4 border-slate-600 pl-4 italic text-slate-300" {...props} />
           ),
+          img: ({ node, ...props }) => <img className="w-[60%] mx-auto my-6 shadow-md rounded" {...props} />,
         }}
       >
         {content}
