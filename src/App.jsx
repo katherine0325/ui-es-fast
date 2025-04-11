@@ -39,8 +39,8 @@ function App() {
                 <>
                   <SEO
                     title="文档 - ESFast"
-                    description="ESFast 框架的完整文档，包含安装指南、使用教程、API 参考和最佳实践。"
-                    keywords="ESFast 文档, 安装指南, 使用教程, API 参考, 最佳实践"
+                    description="ESFast 框架的完整文档，包含安装指南、使用教程、API参考和最佳实践。"
+                    keywords="ESFast 文档, 安装指南, 使用教程, API参考, 最佳实践"
                   />
                   <Docs />
                 </>
