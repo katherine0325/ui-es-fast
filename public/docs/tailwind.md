@@ -23,4 +23,4 @@ src/App.vue
 恭喜！请在应用中尝试使用更多的TailwindCss吧，官网地址：[TailwindCss](https://www.tailwindcss.cn/docs/font-size)。接下来，你可以：
 
 1. 尝试使用更多的TailwindCss
-2. 查看下一章节，路由分页
+2. 查看下一章节，新增一个页面

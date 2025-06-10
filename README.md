@@ -14,3 +14,13 @@ If you are developing a production application, we recommend using TypeScript an
 
 
 # 待开发
+
+
+
+# 如何更新本项目
+1. 更新代码
+2. git add -> git commit 
+3. git push (main)
+4. 刷新网页 https://curious-tiramisu-672651.netlify.app 查看效果
+
+> 注意事项：为了seo，我的文档生成了静态页面，如果是比较关键字的修改，还是需要搜索关键字一并更新的

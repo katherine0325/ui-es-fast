@@ -12,7 +12,7 @@ export function getAllDocs() {
     { key: 'start', label: '5分钟开始一个应用' },
     { key: 'antd', label: '在应用中使用Antd组件' },
     { key: 'tailwind', label: '在应用中使用TailwindCss' },
-    { key: 'route', label: '路由分页' },
+    { key: 'route', label: '新增一个页面' },
     { key: 'indexdb', label: '数据增删改查' },
     { key: 'node', label: 'Node原生方法的调用' },
     { key: 'image', label: '图片存储最佳实践' },
