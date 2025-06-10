@@ -3,7 +3,7 @@
 ```bash
 # npm
 npm run build
-
+# 或
 # yarn
 yarn build
 ```
@@ -16,7 +16,7 @@ yarn build
 ```bash
 # npm
 npm run build-mac
-
+# 或
 #yarn
 yarn build-mac
 ```
@@ -26,7 +26,7 @@ yarn build-mac
 ```bash
 # npm
 npm run build-win
-
+# 或
 # yarn
 yarn build-win
 ```

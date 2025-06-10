@@ -1,4 +1,4 @@
-# 路由分页
+# 新增一个页面
 
 ## 代码
 src/views/About.vue

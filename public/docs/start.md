@@ -10,7 +10,7 @@ ESFast 是一个桌面应用基础开发框架，它集成了 Vue3，Antd，Tail
 ```bash
 # npm
 npm install
-
+# 或
 # yarn
 yarn
 ```
@@ -20,13 +20,13 @@ yarn
 ```bash
 # npm
 npm run dev
-
+# 或
 # yarn
 yarn dev
 ```
 
 
-这将启动开发服务器，并打开一个 Electron 窗口，显示你的应用。当你修改代码时，应用会自动重新加载。
+这将启动开发服务器，并打开一个窗口，显示你的应用。当你修改代码时，应用会自动重新加载。
 ![image](/docs/images/start_01.jpg)
 
 
